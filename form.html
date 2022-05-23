@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<title>Feedback Form</title>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth
+    }
+
+    /*/////////////////////////
+    -Nav Section-
+     /////////////////////////*/
+    .hero {
+        height: 100%;
+        width: 100%;
+        background-image: url("Image/Wallpaper/fomr.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .logo:hover {
+        color: rgb(10, 228, 203);
+        transition: .4s;
+    }
+
+    span {
+        color: rgb(10, 228, 203);
+    }
+
+    nav {
+        background: rgb(11, 11, 11);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-shadow: 0 25px 20px -20px rgba(0, 255, 21, 0.4);
+    }
+
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 20px 35px;
+
+        margin: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #777;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    nav ul li::after {
+        content: '';
+        background: rgb(10, 228, 203);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        opacity: 0;
+        transition: top 0.5s, opacity 0.5s;
+    }
+
+    nav ul li a {
+        color: #ededed;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    nav ul li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    nav ul li:hover::after {
+        top: 50%;
+        opacity: 1;
+    }
+
+    /*-----------------------------------------------*/
+
+    /*/////////////////////////
+    -Form Section-
+     /////////////////////////*/
+    body,
+    div,
+    form,
+    input,
+    select,
+    textarea,
+    p {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+    }
+
+    h1 {
+        position: absolute;
+        margin: 0;
+        line-height: 42px;
+        font-size: 42px;
+        color: #fff;
+        z-index: 2;
+    }
+
+    .formbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 20px;
+    }
+
+    form {
+        width: 50%;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 0 25px 0 #d6e0f5;
+    }
+
+    .banner {
+        position: relative;
+        height: 300px;
+        background-image: url("Image/Wallpaper/formwpp.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input {
+        width: calc(100% - 10px);
+        padding: 5px;
+    }
+
+    select {
+        width: 100%;
+        padding: 7px 0;
+        background: transparent;
+    }
+
+    textarea {
+        width: calc(100% - 12px);
+        padding: 5px;
+    }
+
+    .item input:hover,
+    .item select:hover,
+    .item textarea:hover {
+        border: 1px solid transparent;
+        box-shadow: 0 0 6px 0 #d6e0f5;
+        color: #d6e0f5;
+    }
+
+    .item {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .btn-block {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #0087cc;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #6eb8dd;
+    }
+
+    /*-----------------------------------------------*/
+</style>
+
+<head>
+    <title> My Hobby</title>
+
+    <!-- Favicons -->
+    <link href="Image/title/favicon.ico" rel="icon">
+    <link href="Image/title/favicon.icoapple-touch-icon.png" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicons -->
+
+</head>
+
+<body>
+
+    <!----Nav Section start---->
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo"></a>Key<span>Rol</span></h2>
+            <ul>
+                <li><a href="index.html">Hobby</a></li>
+                <li><a href="photo.html">Photo</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="contact-Us.html">Contact Us</a></li>
+                <li><a href="form.html">Form</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+
+        <!----Nav Section end---->
+
+        <!----Form Section start---->
+        <div class="formbox">
+            <form action="/">
+                <div class="banner">
+                    <h1>Feedback Form</h1>
+                </div>
+                <div class="item">
+                    <p>Name</p>
+                    <div class="name-item">
+                        <input type="text" name="name" placeholder="First" />
+                        <input type="text" name="name" placeholder="Last" />
+                    </div>
+                </div>
+                <div class="item">
+                    <p>Email</p>
+                    <input type="email" name="email" />
+                </div>
+                <div class="item">
+                    <p>Phone</p>
+                    <input type="text" name="phone" placeholder="012-3456789" />
+                </div>
+                <div class="item">
+                    <p>Additional notes</p>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="btn-block">
+                    <button type="submit" href="/">Send</button>
+                </div>
+            </form>
+        </div>
+        <!----Form Section end---->
+</body>
+
+
+</html>
