@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth
+    }
+
+    .hero {
+        height: 100vh;
+        width: 100%;
+        background-image: url("Image/Wallpaper/grey.jpg");
+        /*background-color: #949398FF;*/
+        background-size: cover;
+        background-position: center;
+    }
+
+    nav {
+        background: rgb(11, 11, 11);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-shadow: 0 25px 20px -20px rgba(255, 171, 2, 0.4);
+    }
+
+    .logo {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .logo:hover {
+        color: #ca921b;
+        transition: .4s;
+    }
+
+    span {
+        color: #ca921b;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 20px 35px;
+
+        margin: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #777;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    nav ul li::after {
+        content: '';
+        background: #ca921b;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        opacity: 0;
+        transition: top 0.5s, opacity 0.5s;
+    }
+
+    nav ul li a {
+        color: #ededed;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    nav ul li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    nav ul li:hover::after {
+        top: 50%;
+        opacity: 1;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+    }
+
+    h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 75px;
+        justify-content: space-around;
+    }
+
+    .gotopbtn {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background: #ca921b;
+        bottom: 40px;
+        right: 50px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color: rgb(0, 0, 0);
+        font-size: 22px;
+        border-radius: 50%;
+    }
+
+    .content .button-one {
+        background-color: #ca921b;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .4s;
+    }
+
+    .content .button-one:hover {
+        background-color: transparent;
+        border: 2px solid #ca921b;
+        cursor: pointer;
+    }
+
+    .contact-me p {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .contact-me .button-one {
+        background-color: #ca921b;
+        color: #949398FF;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .4s;
+    }
+
+    .contact-me .button-one:hover {
+        background-color: transparent;
+        border: 2px solid #ca921b;
+        cursor: pointer;
+    }
+
+    table {
+
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        
+    }
+
+    .header_fixed {
+        max-height: 100vh;
+        width: 80%;
+        overflow: hidden;
+        border: 1px solid #000000;
+    }
+
+    .header_fixed thead th {
+        position: sticky;
+        top: 0;
+        background-color: black;
+        color: #e6e7e8;
+        font-size: 15px;
+    }
+
+    th,
+    td {
+        border-bottom: 1px solid #dddddd;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    td img {
+        height: 60px;
+        width: 60px;
+    
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #edeef1;
+    }
+
+    tr:hover td {
+        background-color: #ffffff;
+    }
+
+    td button {
+
+        border: none;
+        padding: 7px 20px;
+        border-radius: 20px;
+        background-color: #ca921b;
+        color: black;
+        cursor: pointer;
+    }
+
+    .bg {
+        background-color: #ca921b;
+        width: 100%;
+        height: 100vh;
+        padding: 200px;
+        background-size: cover;
+
+    }
+</style>
+
+
+<head>
+    <title> Contact</title>
+
+    <!-- Favicons -->
+    <link href="Image/title/favicon.ico" rel="icon">
+    <link href="Image/title/favicon.icoapple-touch-icon.png" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!----hero Section start---->
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo"><a href="Assgmnt.html"></a>Key<span>Rol</span></h2>
+            <ul>
+                <li><a href="Assgmnt.html">Hobby</a></li>
+                <li><a href="Photo.html">Photo</a></li>
+                <li><a href="Video.html">Video</a></li>
+                <li><a href="Contact-Us.html">Contact Us</a></li>
+                <li><a href="Form.html">Form</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+
+            <h1>Cont <span>Act</span></h1>
+            <br>
+            <a class="button-one" href="#down">Contact</a>
+        </div>
+    </div>
+
+    <div class="bg">
+        <section id="down"></section>
+
+        <center>
+            <div class="header_fixed">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Platform</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Image/title/whatsapp-128.png" /></td>
+                            <td>WhatsApp</td>
+                            <td><button><a href="https://web.whatsapp.com/" >View</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Image/title/ig.png" /></td>
+                            <td>Instagram</td>
+                            <td><button><a href="https://www.instagram.com/khaibnnchip/">View</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Image/title/fb.png" /></td>
+                            <td>Twitter</td>
+                            <td><button><a href="https://www.facebook.com/">View</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Merge Cells</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </center>
+    </div>
+
+
+
+
+    <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+</body>
+
+</html>
